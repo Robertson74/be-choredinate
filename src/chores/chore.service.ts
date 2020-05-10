@@ -12,4 +12,8 @@ export class ChoreService {
   async getAllChores() {
     return await this.repo.find();
   }
+
+  async save(chores: Array<Chore>) {
+    return await this.repo.save(chores);
+  }
 }
